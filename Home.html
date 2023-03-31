@@ -1,0 +1,1679 @@
+<html>
+  <head>
+    <title>Cloud Center</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+      }
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+
+      h2 {
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      #map {
+        margin: 0 auto;
+        width: 98%;
+        height: 82%;
+        border: 10px solid rgb(63, 63, 63);
+        border-radius: 10px;
+      }
+
+      .nav-bar {
+        color: aliceblue;
+        background-color: rgb(63, 63, 63);
+        border: 4px solid rgb(63, 63, 63);
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 99%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .img {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 50;
+        width: 50;
+        border: 3px solid rgb(63, 63, 63);
+        border-radius: 50%;
+      }
+
+      .nav-right {
+        margin-right: 10px;
+      }
+
+      .heading {
+        font-size: larger;
+        margin-left: 20px;
+      }
+    </style>
+
+    <script>
+      function initMap() {
+        var on = true;
+        var intervalSeconds = 0.5;
+        var myLatLng = { lat: 52.377956, lng: 4.89707 };
+
+        var on1 = true;
+        var intervalSeconds1 = 0.5;
+        var myLatLng1 = { lat: 52.412811, lng: -1.778197 };
+
+        var on2 = true;
+        var intervalSeconds2 = 0.5;
+        var myLatLng2 = { lat: 51.0467643184, lng: 13.7380445253 };
+
+        var on3 = true;
+        var intervalSeconds3 = 0.5;
+        var myLatLng3 = { lat: 59.458217, lng: 18.277688 };
+
+        var on4 = true;
+        var intervalSeconds4 = 0.5;
+        var myLatLng4 = { lat: 51.050407, lng: 13.737262 };
+
+        var on5 = true;
+        var intervalSeconds5 = 0.5;
+        var myLatLng5 = { lat: 51.049999, lng: 3.733333 };
+
+        var on6 = true;
+        var intervalSeconds6 = 0.5;
+        var myLatLng6 = { lat: -25.042261, lng: 117.793221 };
+
+        var on7 = true;
+        var intervalSeconds7 = 0.5;
+        var myLatLng7 = { lat: -25.881188, lng: 28.226347 };
+
+        var on8 = true;
+        var intervalSeconds8 = 0.5;
+        var myLatLng8 = { lat: 48.13715, lng: 11.576124 };
+
+        var on9 = true;
+        var intervalSeconds9 = 0.5;
+        var myLatLng9 = { lat: 48.7775, lng: 11.431111 };
+
+        var on10 = true;
+        var intervalSeconds10 = 0.5;
+        var myLatLng10 = { lat: 52.308056, lng: 4.764167 };
+
+        var on11 = true;
+        var intervalSeconds11 = 0.5;
+        var myLatLng11 = { lat: 32.779167, lng: -96.808891 };
+
+        var on12 = true;
+        var intervalSeconds12 = 0.5;
+        var myLatLng12 = { lat: 51.513058, lng: -0.082361 };
+
+        var on13 = true;
+        var intervalSeconds13 = 0.5;
+        var myLatLng13 = { lat: 52.370216, lng: 4.895168 };
+
+        var on14 = true;
+        var intervalSeconds14 = 0.5;
+        var myLatLng14 = { lat: 41.394966, lng: -73.454079 };
+
+        var on15 = true;
+        var intervalSeconds15 = 0.5;
+        var myLatLng15 = { lat: 59.3339189, lng: 18.07594 };
+
+        var on16 = true;
+        var intervalSeconds16 = 0.5;
+        var myLatLng16 = { lat: 48.135125, lng: 11.58198 };
+
+        var on17 = true;
+        var intervalSeconds17 = 0.5;
+        var myLatLng17 = { lat: 49.354883, lng: 0.514299 };
+
+        var on18 = true;
+        var intervalSeconds18 = 0.5;
+        var myLatLng18 = { lat: 46.476106, lng: 6.430187 };
+
+        var on19 = true;
+        var intervalSeconds19 = 0.5;
+        var myLatLng19 = { lat: 47.510804, lng: 8.367561 };
+
+        var on20 = true;
+        var intervalSeconds20 = 0.5;
+        var myLatLng20 = { lat: 36.124899, lng: -115.194062 };
+
+        var on21 = true;
+        var intervalSeconds21 = 0.5;
+        var myLatLng21 = { lat: 51.49967, lng: -0.161907 };
+
+        var on22 = true;
+        var intervalSeconds22 = 0.5;
+        var myLatLng22 = { lat: 32.819595, lng: -96.945419 };
+
+        var on23 = true;
+        var intervalSeconds23 = 0.5;
+        var myLatLng23 = { lat: -38.099998, lng: 147.066666 };
+
+        var on24 = true;
+        var intervalSeconds24 = 0.5;
+        var myLatLng24 = { lat: 52.37392, lng: 9.735603 };
+
+        var on25 = true;
+        var intervalSeconds25 = 0.5;
+        var myLatLng25 = { lat: 40.73061, lng: -73.935242 };
+
+        var on26 = true;
+        var intervalSeconds26 = 0.5;
+        var myLatLng26 = { lat: 37.432335, lng: -121.899574 };
+
+        var on27 = true;
+        var intervalSeconds27 = 0.5;
+        var myLatLng27 = { lat: 41.881832, lng: -87.623177 };
+
+        var on28 = true;
+        var intervalSeconds28 = 0.5;
+        var myLatLng28 = { lat: 51.5931, lng: -1.7274 };
+
+        var on29 = true;
+        var intervalSeconds29 = 0.5;
+        var myLatLng29 = { lat: 38.6432563, lng: -90.3453032 };
+
+        var on30 = true;
+        var intervalSeconds30 = 0.5;
+        var myLatLng30 = { lat: -82.80383719730973, lng: 40.31658985900742 };
+
+        var on31 = true;
+        var intervalSeconds31 = 0.5;
+        var myLatLng31 = { lat: -25.274398, lng: 133.775136 };
+
+        var on32 = true;
+        var intervalSeconds32 = 0.5;
+        var myLatLng32 = { lat: 40.429776, lng: -3.693659 };
+
+        var on33 = true;
+        var intervalSeconds33 = 0.5;
+        var myLatLng33 = { lat: 26.12051927, lng:  92.0061675 };
+
+        var on34 = true;
+        var intervalSeconds34 = 0.5;
+        var myLatLng34 = { lat: 48.864716, lng: 2.349014 };
+
+        var on35 = true;
+        var intervalSeconds35 = 0.5;
+        var myLatLng35 = { lat: 51.509865, lng: -0.118092 };
+
+        var on36 = true;
+        var intervalSeconds36 = 0.5;
+        var myLatLng36 = { lat: 52.07975, lng: 4.323655 };
+
+        var on37 = true;
+        var intervalSeconds37 = 0.5;
+        var myLatLng37 = { lat: 51.16008, lng: 6.063956 };
+
+        var on38 = true;
+        var intervalSeconds38 = 0.5;
+        var myLatLng38 = { lat: 42.1945758, lng: -122.7094767 };
+
+        var on39 = true;
+        var intervalSeconds39 = 0.5;
+        var myLatLng39 = { lat: 47.363193, lng: 8.534291 };
+
+        var on40 = true;
+        var intervalSeconds40 = 0.5;
+        var myLatLng40 = { lat: -27.672817, lng: 121.62831 };
+
+        var on41 = true;
+        var intervalSeconds41 = 0.5;
+        var myLatLng41 = { lat: 51.165691, lng:  10.451526 };
+
+        var on42 = true;
+        var intervalSeconds42 = 0.5;
+        var myLatLng42 = { lat: 50.883342, lng:  4.429374 };
+
+        var on43 = true;
+        var intervalSeconds43 = 0.5;
+        var myLatLng43 = { lat: 51.050407, lng:  13.737262 };
+
+        var on44 = true;
+        var intervalSeconds44 = 0.5;
+        var myLatLng44 = { lat: 52.377956, lng:  4.89707 };
+
+        var on45 = true;
+        var intervalSeconds45 = 0.5;
+        var myLatLng45 = { lat: 51.427543, lng:  5.532692 };
+
+        var on46 = true;
+        var intervalSeconds46 = 0.5;
+        var myLatLng46 = { lat: 53.367403, lng: -2.266881 };
+
+        var locations = [
+        [
+            '<a href="#"><div style="color:red"><b>Philips A3S</div></b></a>',
+            52.377956,
+            4.89707,
+            1,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Britvic</div></b></a>',
+            52.412811,
+            -1.778197,
+            2,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Karstadt</div></b></a>',
+            51.0467643184,
+            13.7380445253,
+            3,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>AGFA</div></b></a>',
+            59.458217,
+            18.277688,
+            4,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Siemens ADP SAP</div></b></a>',
+            51.050407,
+            13.737262,
+            5,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Flemish Govt.</div></b></a>',
+            51.049999,
+            3.733333,
+            6,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Western Australia Gvt.</div></b></a>',
+            -25.042261,
+            117.793221,
+            7,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Irene</div></b></a>',
+            -25.881188,
+            28.226347,
+            8,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Siemens Digital Industries</div></b></a>',
+            48.13715,
+            11.576124,
+            9,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>BSH</div></b></a>',
+            48.7775,
+            11.431111,
+            10,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Lumileds</div></b></a>',
+            52.308056,
+            4.764167,
+            11,
+          ],[
+            '<a href="#"><div style="color:red"><b>BSWH</b></div></a>',
+            32.779167,
+            -96.808891,
+            12,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Willis Tower Watson</b></div></a>',
+            51.513058,
+            -0.082361,
+            13,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Akzo Nobel</b></div></a>',
+            52.370216,
+            4.895168,
+            14,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>BlueCrest</b></div></a>',
+            41.394966,
+            -73.454079,
+            15,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Handicare</b></div></a>',
+            59.3339189,
+            18.07594,
+            16,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>ERP2CLOUD (Siemens)</b></div></a>',
+            48.135125,
+            11.58198,
+            17,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Thales Gemalto.</b></div></a>',
+            49.354883,
+            0.514299,
+            18,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Ferring</b></div></a>',
+            46.476106,
+            6.430187,
+            19,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Bucher</b></div></a>',
+            47.510804,
+            8.367561,
+            20,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>PLI</b></div></a>',
+            36.124899,
+            -115.194062,
+            21,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Ineos</b></div></a>',
+            51.49967,
+            -0.161907,
+            22,
+          ],
+
+          [
+            '<a href="#"><div style="color:red"><b>McKesson</div></b></a>',
+            32.819595,
+            -96.945419,
+            23,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Atos Global Tooling Services (CMF)</div></b></a>',
+            -38.099998,
+            147.066666,
+            24,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Bahlsen GmbH & Co. KG</div></b></a>',
+            52.37392,
+            9.735603,
+            25,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>GIM</div></b></a>',
+            40.73061,
+            -73.935242,
+            26,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>KCS</div></b></a>',
+            37.432335,
+            -121.899574,
+            27,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>CNA</div></b></a>',
+            41.881832,
+            -87.623177,
+            28,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Honda UK Manufacturing</div></b></a>',
+            51.5931,
+            -1.7274,
+            29,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Enterprise holdings</div></b></a>',
+             -82.80383719730973,
+             40.31658985900742,
+            30,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Western Australia Gvt.</b></div></a>',
+            -27.672817,
+            121.62831,
+            31,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>OHC4SAP</b></div></a>',
+            -25.274398,
+            133.775136,
+            32,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>Cuatrecasas</b></div></a>',
+            40.429776,
+            -3.693659,
+            33,
+          ],
+          [
+            '<a href="#"><div style="color:red"><b>RBI</div></b></a>',
+            26.12051927,
+            92.0061675,
+            34,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Processia</div></b></a>',
+            48.864716,
+            2.349014,
+            35,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Paragon</div></b></a>',
+            51.509865,
+            -0.118092,
+            36,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Ministerie van Infrastructuur en Waterstaat (Min I&W)</div></b></a>',
+            52.07975,
+            4.323655,
+            37,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Nouryon</div></b></a>',
+          51.16008,
+          6.063956,
+          38,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Ashland</div></b></a>',
+          42.1945758,
+          -122.7094767,
+          39,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Swiss Life</div></b></a>',
+          47.363193,
+          8.534291,
+          40,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Western Australia Gvt.</div></b></a>',
+          -27.672817,
+          121.62831,
+          41,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Siemens Digital Industries (former: Industry Mall)</div></b></a>',
+          51.165691,
+          10.451526,
+          42,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Eurocontrol</div></b></a>',
+          50.883342,
+          4.429374,
+          43,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Siemens SHS</div></b></a>',
+          51.050407,
+          13.737262,
+          44,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>Philips</div></b></a>',
+          52.377956,
+          4.89707,
+          45,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>DAF</div></b></a>',
+          51.427543,
+          5.532692,
+          46,
+          ],
+
+          [
+          '<a href="#"><div style="color:red"><b>PZ Cussons</div></b></a>',
+          53.367403,
+          -2.266881,
+          47,
+          ]
+
+
+
+          /*
+           * Next point on map
+           *   -Notice how the last number within the brackets incrementally increases from the prior marker
+           *   -Use http://itouchmap.com/latlong.html to get Latitude and Longitude of a specific address
+           *   -Follow the model below:
+           *      ['<b>Name 3</b><br>Address Line 1<br>City, ST Zipcode<br>Phone: ###-###-####<br><a href="#" target="_blank">Link<a> of some sort.', ##.####, -##.####, #]
+           */
+        ];
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 1.8,
+          /* Zoom level of your map */
+          center: new google.maps.LatLng(20.5937, 40.9629),
+          /* coordinates for the center of your map */
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker1 = new google.maps.Marker({
+          position: myLatLng1,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: myLatLng2,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: myLatLng3,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker4 = new google.maps.Marker({
+          position: myLatLng4,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker5 = new google.maps.Marker({
+          position: myLatLng5,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker6 = new google.maps.Marker({
+          position: myLatLng6,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker7 = new google.maps.Marker({
+          position: myLatLng7,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker8 = new google.maps.Marker({
+          position: myLatLng8,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker9 = new google.maps.Marker({
+          position: myLatLng9,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker10 = new google.maps.Marker({
+          position: myLatLng10,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker11 = new google.maps.Marker({
+          position: myLatLng11,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker12 = new google.maps.Marker({
+          position: myLatLng12,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker13 = new google.maps.Marker({
+          position: myLatLng13,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker14 = new google.maps.Marker({
+          position: myLatLng14,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker15 = new google.maps.Marker({
+          position: myLatLng15,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker16 = new google.maps.Marker({
+          position: myLatLng16,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker17 = new google.maps.Marker({
+          position: myLatLng17,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker18 = new google.maps.Marker({
+          position: myLatLng18,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker19 = new google.maps.Marker({
+          position: myLatLng19,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker20 = new google.maps.Marker({
+          position: myLatLng20,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker21 = new google.maps.Marker({
+          position: myLatLng21,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker30 = new google.maps.Marker({
+          position: myLatLng30,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker31 = new google.maps.Marker({
+          position: myLatLng31,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker32 = new google.maps.Marker({
+          position: myLatLng32,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker22 = new google.maps.Marker({
+          position: myLatLng22,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker23 = new google.maps.Marker({
+          position: myLatLng23,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker24 = new google.maps.Marker({
+          position: myLatLng24,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker25 = new google.maps.Marker({
+          position: myLatLng25,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker26 = new google.maps.Marker({
+          position: myLatLng26,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker27 = new google.maps.Marker({
+          position: myLatLng27,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker28 = new google.maps.Marker({
+          position: myLatLng28,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker29 = new google.maps.Marker({
+          position: myLatLng29,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker33 = new google.maps.Marker({
+          position: myLatLng33,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "green",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+
+        var marker34 = new google.maps.Marker({
+          position: myLatLng34,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+
+        var marker35 = new google.maps.Marker({
+          position: myLatLng35,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "black",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker36 = new google.maps.Marker({
+          position: myLatLng36,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker37 = new google.maps.Marker({
+          position: myLatLng37,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker38 = new google.maps.Marker({
+          position: myLatLng38,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker39 = new google.maps.Marker({
+          position: myLatLng39,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker40 = new google.maps.Marker({
+          position: myLatLng40,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker41 = new google.maps.Marker({
+          position: myLatLng41,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker42 = new google.maps.Marker({
+          position: myLatLng42,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker43 = new google.maps.Marker({
+          position: myLatLng43,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker44 = new google.maps.Marker({
+          position: myLatLng44,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker45 = new google.maps.Marker({
+          position: myLatLng45,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+
+        var marker46 = new google.maps.Marker({
+          position: myLatLng46,
+          map: map,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: "blue",
+
+            fillOpacity: 0.8,
+            strokeWeight: 0,
+            scale: 5,
+          },
+        });
+        
+              
+        marker.addListener("click", function () {
+          infowindow.setContent(locations[0][0]);
+          infowindow.open(map, marker);
+        });
+
+        marker.addListener("mouseover", function () {
+          infowindow.setContent(locations[0][0]);
+          infowindow.open(map, marker);
+        });
+
+        marker1.addListener("click", function () {
+          infowindow.setContent(locations[1][0]);
+          infowindow.open(map, marker1);
+        });
+
+        marker1.addListener("mouseover", function () {
+          infowindow.setContent(locations[1][0]);
+          infowindow.open(map, marker1);
+        });
+
+        marker2.addListener("click", function () {
+          infowindow.setContent(locations[2][0]);
+          infowindow.open(map, marker1);
+        });
+
+        marker2.addListener("mouseover", function () {
+          infowindow.setContent(locations[2][0]);
+          infowindow.open(map, marker2);
+        });
+
+        marker3.addListener("click", function () {
+          infowindow.setContent(locations[3][0]);
+          infowindow.open(map, marker3);
+        });
+
+        marker3.addListener("mouseover", function () {
+          infowindow.setContent(locations[3][0]);
+          infowindow.open(map, marker3);
+        });
+
+        marker4.addListener("click", function () {
+          infowindow.setContent(locations[4][0]);
+          infowindow.open(map, marker4);
+        });
+
+        marker4.addListener("mouseover", function () {
+          infowindow.setContent(locations[4][0]);
+          infowindow.open(map, marker4);
+        });
+
+        marker5.addListener("click", function () {
+          infowindow.setContent(locations[5][0]);
+          infowindow.open(map, marker5);
+        });
+
+        marker5.addListener("mouseover", function () {
+          infowindow.setContent(locations[5][0]);
+          infowindow.open(map, marker5);
+        });
+
+        marker6.addListener("click", function () {
+          infowindow.setContent(locations[6][0]);
+          infowindow.open(map, marker6);
+        });
+
+        marker6.addListener("mouseover", function () {
+          infowindow.setContent(locations[6][0]);
+          infowindow.open(map, marker6);
+        });
+
+        marker7.addListener("click", function () {
+          infowindow.setContent(locations[7][0]);
+          infowindow.open(map, marker7);
+        });
+
+        marker7.addListener("mouseover", function () {
+          infowindow.setContent(locations[7][0]);
+          infowindow.open(map, marker7);
+        });
+
+        marker8.addListener("click", function () {
+          infowindow.setContent(locations[8][0]);
+          infowindow.open(map, marker8);
+        });
+
+        marker8.addListener("mouseover", function () {
+          infowindow.setContent(locations[8][0]);
+          infowindow.open(map, marker8);
+        });
+
+        marker9.addListener("click", function () {
+          infowindow.setContent(locations[9][0]);
+          infowindow.open(map, marker9);
+        });
+
+        marker9.addListener("mouseover", function () {
+          infowindow.setContent(locations[9][0]);
+          infowindow.open(map, marker9);
+        });
+
+        marker10.addListener("click", function () {
+          infowindow.setContent(locations[10][0]);
+          infowindow.open(map, marker10);
+        });
+
+        marker10.addListener("mouseover", function () {
+          infowindow.setContent(locations[10][0]);
+          infowindow.open(map, marker10);
+        });
+
+        marker11.addListener("click", function () {
+          infowindow.setContent(locations[11][0]);
+          infowindow.open(map, marker11);
+        });
+
+        marker11.addListener("mouseover", function () {
+          infowindow.setContent(locations[11][0]);
+          infowindow.open(map, marker11);
+        });
+
+        marker12.addListener("click", function () {
+          infowindow.setContent(locations[12][0]);
+          infowindow.open(map, marker12);
+        });
+
+        marker12.addListener("mouseover", function () {
+          infowindow.setContent(locations[12][0]);
+          infowindow.open(map, marker12);
+        });
+
+        marker13.addListener("click", function () {
+          infowindow.setContent(locations[13][0]);
+          infowindow.open(map, marker13);
+        });
+
+        marker13.addListener("mouseover", function () {
+          infowindow.setContent(locations[13][0]);
+          infowindow.open(map, marker13);
+        });
+
+        marker14.addListener("click", function () {
+          infowindow.setContent(locations[14][0]);
+          infowindow.open(map, marker14);
+        });
+
+        marker14.addListener("mouseover", function () {
+          infowindow.setContent(locations[14][0]);
+          infowindow.open(map, marker14);
+        });
+
+        marker15.addListener("click", function () {
+          infowindow.setContent(locations[15][0]);
+          infowindow.open(map, marker15);
+        });
+
+        marker15.addListener("mouseover", function () {
+          infowindow.setContent(locations[15][0]);
+          infowindow.open(map, marker4);
+        });
+
+        marker16.addListener("click", function () {
+          infowindow.setContent(locations[16][0]);
+          infowindow.open(map, marker16);
+        });
+
+        marker16.addListener("mouseover", function () {
+          infowindow.setContent(locations[16][0]);
+          infowindow.open(map, marker16);
+        });
+
+        marker17.addListener("click", function () {
+          infowindow.setContent(locations[17][0]);
+          infowindow.open(map, marker17);
+        });
+
+        marker17.addListener("mouseover", function () {
+          infowindow.setContent(locations[17][0]);
+          infowindow.open(map, marker17);
+        });
+
+        marker18.addListener("click", function () {
+          infowindow.setContent(locations[18][0]);
+          infowindow.open(map, marker18);
+        });
+
+        marker18.addListener("mouseover", function () {
+          infowindow.setContent(locations[18][0]);
+          infowindow.open(map, marker18);
+        });
+
+        marker19.addListener("click", function () {
+          infowindow.setContent(locations[19][0]);
+          infowindow.open(map, marker19);
+        });
+
+        marker19.addListener("mouseover", function () {
+          infowindow.setContent(locations[19][0]);
+          infowindow.open(map, marker19);
+        });
+
+        marker20.addListener("click", function () {
+          infowindow.setContent(locations[20][0]);
+          infowindow.open(map, marker20);
+        });
+
+        marker20.addListener("mouseover", function () {
+          infowindow.setContent(locations[20][0]);
+          infowindow.open(map, marker20);
+        });
+
+        marker21.addListener("click", function () {
+          infowindow.setContent(locations[21][0]);
+          infowindow.open(map, marker21);
+        });
+
+        marker21.addListener("mouseover", function () {
+          infowindow.setContent(locations[21][0]);
+          infowindow.open(map, marker21);
+        });   
+
+        marker22.addListener("click", function () {
+          infowindow.setContent(locations[22][0]);
+          infowindow.open(map, marker22);
+        });
+
+        marker22.addListener("mouseover", function () {
+          infowindow.setContent(locations[22][0]);
+          infowindow.open(map, marker22);
+        });
+
+        marker23.addListener("click", function () {
+          infowindow.setContent(locations[23][0]);
+          infowindow.open(map, marker23);
+        });
+
+        marker23.addListener("mouseover", function () {
+          infowindow.setContent(locations[23][0]);
+          infowindow.open(map, marker23);
+        });
+
+        marker24.addListener("click", function () {
+          infowindow.setContent(locations[24][0]);
+          infowindow.open(map, marker24);
+        });
+
+        marker24.addListener("mouseover", function () {
+          infowindow.setContent(locations[24][0]);
+          infowindow.open(map, marker24);
+        });
+
+        marker25.addListener("click", function () {
+          infowindow.setContent(locations[25][0]);
+          infowindow.open(map, marker25);
+        });
+
+        marker25.addListener("mouseover", function () {
+          infowindow.setContent(locations[25][0]);
+          infowindow.open(map, marker25);
+        });
+
+        marker26.addListener("click", function () {
+          infowindow.setContent(locations[26][0]);
+          infowindow.open(map, marker26);
+        });
+
+        marker26.addListener("mouseover", function () {
+          infowindow.setContent(locations[26][0]);
+          infowindow.open(map, marker26);
+        });
+
+        marker27.addListener("click", function () {
+          infowindow.setContent(locations[27][0]);
+          infowindow.open(map, marker27);
+        });
+
+        marker27.addListener("mouseover", function () {
+          infowindow.setContent(locations[27][0]);
+          infowindow.open(map, marker27);
+        });
+
+        marker28.addListener("click", function () {
+          infowindow.setContent(locations[28][0]);
+          infowindow.open(map, marker28);
+        });
+
+        marker28.addListener("mouseover", function () {
+          infowindow.setContent(locations[28][0]);
+          infowindow.open(map, marker28);
+        });
+
+        marker29.addListener("click", function () {
+          infowindow.setContent(locations[29][0]);
+          infowindow.open(map, marker29);
+        });
+
+        marker29.addListener("mouseover", function () {
+          infowindow.setContent(locations[29][0]);
+          infowindow.open(map, marker29);
+        });
+
+        marker30.addListener("click", function () {
+          infowindow.setContent(locations[30][0]);
+          infowindow.open(map, marker30);
+        });
+
+        marker30.addListener("mouseover", function () {
+          infowindow.setContent(locations[30][0]);
+          infowindow.open(map, marker30);
+        });
+
+        marker31.addListener("click", function () {
+          infowindow.setContent(locations[31][0]);
+          infowindow.open(map, marker31);
+        });
+
+        marker31.addListener("mouseover", function () {
+          infowindow.setContent(locations[31][0]);
+          infowindow.open(map, marker31);
+        });
+
+        marker32.addListener("click", function () {
+          infowindow.setContent(locations[32][0]);
+          infowindow.open(map, marker32);
+        });
+
+        marker32.addListener("mouseover", function () {
+          infowindow.setContent(locations[32][0]);
+          infowindow.open(map, marker32);
+        });
+
+        marker33.addListener("click", function () {
+          infowindow.setContent(locations[33][0]);
+          infowindow.open(map, marker33);
+        });
+
+        marker33.addListener("mouseover", function () {
+          infowindow.setContent(locations[33][0]);
+          infowindow.open(map, marker33);
+        });
+
+        marker34.addListener("click", function () {
+          infowindow.setContent(locations[34][0]);
+          infowindow.open(map, marker34);
+        });
+
+        marker34.addListener("mouseover", function () {
+          infowindow.setContent(locations[34][0]);
+          infowindow.open(map, marker34);
+        });
+
+
+        marker35.addListener("click", function () {
+          infowindow.setContent(locations[35][0]);
+          infowindow.open(map, marker35);
+        });
+
+        marker35.addListener("mouseover", function () {
+          infowindow.setContent(locations[35][0]);
+          infowindow.open(map, marker35);
+        });
+
+        marker36.addListener("click", function () {
+          infowindow.setContent(locations[36][0]);
+          infowindow.open(map, marker35);
+        });
+
+        marker36.addListener("mouseover", function () {
+          infowindow.setContent(locations[36][0]);
+          infowindow.open(map, marker35);
+        });
+
+        marker37.addListener("click", function () {
+          infowindow.setContent(locations[37][0]);
+          infowindow.open(map, marker37);
+        });
+
+        marker37.addListener("mouseover", function () {
+          infowindow.setContent(locations[37][0]);
+          infowindow.open(map, marker37);
+        });
+
+        marker38.addListener("click", function () {
+          infowindow.setContent(locations[38][0]);
+          infowindow.open(map, marker38);
+        });
+
+        marker38.addListener("mouseover", function () {
+          infowindow.setContent(locations[38][0]);
+          infowindow.open(map, marker38);
+        });
+
+        marker39.addListener("click", function () {
+          infowindow.setContent(locations[39][0]);
+          infowindow.open(map, marker39);
+        });
+
+        marker39.addListener("mouseover", function () {
+          infowindow.setContent(locations[39][0]);
+          infowindow.open(map, marker39);
+        });
+
+        marker40.addListener("click", function () {
+          infowindow.setContent(locations[40][0]);
+          infowindow.open(map, marker40);
+        });
+
+        marker40.addListener("mouseover", function () {
+          infowindow.setContent(locations[40][0]);
+          infowindow.open(map, marker40);
+        });
+
+        marker41.addListener("click", function () {
+          infowindow.setContent(locations[41][0]);
+          infowindow.open(map, marker41);
+        });
+
+        marker41.addListener("mouseover", function () {
+          infowindow.setContent(locations[41][0]);
+          infowindow.open(map, marker41);
+        });
+
+        marker42.addListener("click", function () {
+          infowindow.setContent(locations[42][0]);
+          infowindow.open(map, marker42);
+        });
+
+        marker42.addListener("mouseover", function () {
+          infowindow.setContent(locations[42][0]);
+          infowindow.open(map, marker42);
+        });
+
+        marker43.addListener("click", function () {
+          infowindow.setContent(locations[43][0]);
+          infowindow.open(map, marker43);
+        });
+
+        marker43.addListener("mouseover", function () {
+          infowindow.setContent(locations[43][0]);
+          infowindow.open(map, marker43);
+        });
+
+        marker44.addListener("click", function () {
+          infowindow.setContent(locations[44][0]);
+          infowindow.open(map, marker44);
+        });
+
+        marker44.addListener("mouseover", function () {
+          infowindow.setContent(locations[44][0]);
+          infowindow.open(map, marker44);
+        });
+
+        marker45.addListener("click", function () {
+          infowindow.setContent(locations[45][0]);
+          infowindow.open(map, marker45);
+        });
+
+        marker45.addListener("mouseover", function () {
+          infowindow.setContent(locations[45][0]);
+          infowindow.open(map, marker45);
+        });
+
+        marker46.addListener("click", function () {
+          infowindow.setContent(locations[46][0]);
+          infowindow.open(map, marker46);
+        });
+
+        marker46.addListener("mouseover", function () {
+          infowindow.setContent(locations[46][0]);
+          infowindow.open(map, marker46);
+        });
+      }
+	  
+      window.addEventListener("load", initMap);
+    </script>
+  </head>
+
+  <body>
+    <div id="map" class="map"></div>
+
+    <nav class="nav-bar">
+      <div class="heading"><h4>Cloud Command Center</h4></div>
+      <div class="nav-right">
+        <!-- <a href="Home.html" class="box">Home</a> -->
+        <a href="AWS.html" class="box"
+          ><img src="AWSLogo.png" alt="AWS" class="img"
+        /></a>
+        <a href="Azure.html" class="box"
+          ><img src="azure.png" alt="Azure" class="img"
+        /></a>
+        <a href="GCP.html" class="box"
+          ><img src="GCPLogo.png" alt="GCP" class="img"
+        /></a>
+      </div>
+    </nav>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR1_QrlmCQMqe16gEasfDL-iN6jxNIfFk&callback=initialize_map"></script>
+   <script src="script.js"></script>
+  </body>
+</html>
